@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenStack Event expirer service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+User=panko
+ExecStart=/usr/bin/panko-expirer --logfile /var/log/panko/expirer.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
