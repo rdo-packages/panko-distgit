@@ -4,7 +4,7 @@
 
 Name:           openstack-panko
 Version:        1.0.0.0b1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Panko provides Event storage and REST API
 
 License:        ASL 2.0
@@ -38,6 +38,7 @@ Requires:       python-oslo-db >= 1.8.0
 Requires:       python-oslo-log >= 1.0.0
 Requires:       python-oslo-middleware
 Requires:       python-oslo-policy >= 0.3.0
+Requires:       python-oslo-reports
 Requires:       python-oslo-sphinx >= 2.2.0
 Requires:       python-oslo-utils >= 1.6.0
 Requires:       python-paste-deploy
