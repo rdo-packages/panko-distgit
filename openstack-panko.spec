@@ -33,20 +33,22 @@ Requires:       python-debtcollector >= 1.2.0
 Requires:       python-retrying
 Requires:       python-lxml
 Requires:       python-keystonemiddleware >= 4.0.0
-Requires:       python-oslo-config >= 2:2.6.0
-Requires:       python-oslo-db >= 1.8.0
-Requires:       python-oslo-log >= 1.0.0
-Requires:       python-oslo-middleware
-Requires:       python-oslo-policy >= 0.3.0
+Requires:       python-oslo-config >= 2:3.9.0
+Requires:       python-oslo-db >= 4.1.0
+Requires:       python-oslo-i18n >= 2.1.0
+Requires:       python-oslo-log >= 1.14.0
+Requires:       python-oslo-middleware >= 3.0.0
+Requires:       python-oslo-policy >= 0.5.0
+Requires:       python-oslo-reports >= 0.6.0
 Requires:       python-oslo-sphinx >= 2.2.0
-Requires:       python-oslo-utils >= 1.6.0
+Requires:       python-oslo-utils >= 3.5.0
 Requires:       python-paste-deploy
 Requires:       python-pecan >= 0.9
 Requires:       python-swiftclient >= 2.5.0
-Requires:       python-six
-Requires:       python-sqlalchemy
+Requires:       python-six >= 1.9.0
+Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-sqlalchemy-utils
-Requires:       python-stevedore
+Requires:       python-stevedore >= 1.9.0
 Requires:       PyYAML
 Requires:       python-webob >= 1.2.3
 Requires:       python-wsme
