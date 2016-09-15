@@ -9,7 +9,7 @@ Summary:        Panko provides Event storage and REST API
 
 License:        ASL 2.0
 URL:            http://github.com/openstack/panko
-Source0:        http://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 Source1:        %{pypi_name}-dist.conf
 Source2:        %{pypi_name}.logrotate
 Source10:       %{name}-api.service
