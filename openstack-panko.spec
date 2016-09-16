@@ -1,15 +1,20 @@
+%global milestone .0rc1
 %global pypi_name panko
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-panko
-Version:        1.0.0.0b1
-Release:        1%{?dist}
+Version:        1.0.0
+Release:        0.1%{?milestone}%{?dist}
 Summary:        Panko provides Event storage and REST API
 
 License:        ASL 2.0
 URL:            http://github.com/openstack/panko
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
+#
+# patches_base=1.0.0.0rc1
+#
+
 Source1:        %{pypi_name}-dist.conf
 Source2:        %{pypi_name}.logrotate
 Source10:       %{name}-api.service
@@ -227,6 +232,9 @@ exit 0
 
 
 %changelog
+* Fri Sep 16 2016 Haikel Guemar <hguemar@fedoraproject.org> 1.0.0-0.1
+- Update to 1.0.0.0rc1
+
 * Fri Jul 29 2016 Pradeep Kilambi <pkilambi@redhat.com> - 1.0.0.0b1-1
 - initial spec
 
