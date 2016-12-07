@@ -30,7 +30,7 @@ HTTP API to store events.
 Summary:        OpenStack panko python libraries
 
 Requires:       python-debtcollector >= 1.2.0
-Requires:       python-retrying
+Requires:       python-tenacity >= 3.1.0
 Requires:       python-lxml
 Requires:       python-keystonemiddleware >= 4.0.0
 Requires:       python-oslo-config >= 2:3.9.0
