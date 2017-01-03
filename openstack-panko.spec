@@ -53,6 +53,7 @@ Requires:       PyYAML
 Requires:       python-webob >= 1.2.3
 Requires:       python-wsme
 Requires:       python-dateutil >= 2.4.2
+Requires:       openstack-ceilometer
 
 %description -n   python-%{pypi_name}
 OpenStack panko provides API to store events from OpenStack components.
@@ -180,6 +181,8 @@ getent group panko >/dev/null || groupadd -r panko
 if ! getent passwd panko >/dev/null; then
   useradd -r -g panko -G panko,nobody -d %{_sharedstatedir}/panko -s /sbin/nologin -c "OpenStack panko Daemons" panko
 fi
+# Add ceilometer user to panko group to read panko config
+usermod -a -G panko ceilometer
 exit 0
 
 %post -n %{name}-api
