@@ -87,6 +87,7 @@ BuildRequires:    python-oslo-service
 BuildRequires:    python-werkzeug
 
 Requires:       python-panko = %{version}-%{release}
+Requires:       openstack-ceilometer-common
 
 
 %description    common
@@ -180,6 +181,8 @@ getent group panko >/dev/null || groupadd -r panko
 if ! getent passwd panko >/dev/null; then
   useradd -r -g panko -G panko,nobody -d %{_sharedstatedir}/panko -s /sbin/nologin -c "OpenStack panko Daemons" panko
 fi
+# Add ceilometer user to panko group to read panko config
+usermod -a -G panko ceilometer
 exit 0
 
 %post -n %{name}-api
