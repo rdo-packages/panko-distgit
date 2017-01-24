@@ -3,8 +3,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-panko
-Version:        1.0.0.0b1
-Release:        1%{?dist}
+Version:        XXX
+Release:        XXX
 Summary:        Panko provides Event storage and REST API
 
 License:        ASL 2.0
@@ -12,16 +12,12 @@ URL:            http://github.com/openstack/panko
 Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstream_version}.tar.gz
 Source1:        %{pypi_name}-dist.conf
 Source2:        %{pypi_name}.logrotate
-Source10:       %{name}-api.service
-Source11:       %{name}-expirer.service
 BuildArch:      noarch
 
 BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
-BuildRequires:  systemd
-
 
 %description
 HTTP API to store events.
@@ -170,9 +166,6 @@ install -d -m 755 %{buildroot}%{_localstatedir}/log/panko
 # Install logrotate
 install -p -D -m 644 %{SOURCE2} %{buildroot}%{_sysconfdir}/logrotate.d/%{name}
 
-# Install systemd unit services
-install -p -D -m 644 %{SOURCE10} %{buildroot}%{_unitdir}/%{name}-api.service
-
 # Remove all of the conf files that are included in the buildroot/usr/etc dir since we installed them above
 rm -f %{buildroot}/usr/etc/panko/*
 
@@ -184,12 +177,6 @@ fi
 # Add ceilometer user to panko group to read panko config
 usermod -a -G panko ceilometer
 exit 0
-
-%post -n %{name}-api
-%systemd_post %{name}-api.service
-
-%preun -n %{name}-api
-%systemd_preun %{name}-api.service
 
 
 %files -n python-panko
@@ -207,7 +194,6 @@ exit 0
 %{_bindir}/panko-api
 %{_bindir}/panko-dbsync
 %{_bindir}/panko-expirer
-%{_unitdir}/%{name}-api.service
 
 %files common
 %dir %{_sysconfdir}/panko
