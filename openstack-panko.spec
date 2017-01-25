@@ -149,6 +149,10 @@ done < %{SOURCE1}
 
 %py2_install
 
+# Create fake egg-info for the tempest plugin
+%global service panko
+%py2_entrypoint %{service} %{service}
+
 mkdir -p %{buildroot}/%{_sysconfdir}/sysconfig/
 mkdir -p %{buildroot}/%{_sysconfdir}/panko/
 mkdir -p %{buildroot}/%{_var}/log/%{name}
