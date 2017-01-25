@@ -145,6 +145,11 @@ done < %{SOURCE1}
 
 %py2_install
 
+# Create fake egg-info for the tempest plugin
+# TODO switch to %{service} everywhere as in openstack-example.spec
+%global service aodh
+%py2_entrypoint %{service} %{service}
+
 mkdir -p %{buildroot}/%{_sysconfdir}/sysconfig/
 mkdir -p %{buildroot}/%{_sysconfdir}/panko/
 mkdir -p %{buildroot}/%{_var}/log/%{name}
