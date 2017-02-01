@@ -18,6 +18,7 @@ BuildRequires:  python-setuptools
 BuildRequires:  python-sphinx
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
+BuildRequires:  openstack-macros
 
 %description
 HTTP API to store events.
