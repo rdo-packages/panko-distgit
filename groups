@@ -1,5 +1,9 @@
-# UUID                                  	Group Name
-#
-b9106d4191089c1ac90495935702aad14e86d1e9	openstack/panko-distgit-ptl
-bd8f1ad5c0081094e7c009f93832b9653f8f905d	openstack/panko-distgit-core
-global:Registered-Users                 	Registered Users
+# UUID Group Name
+global:Registered-Users	Registered Users
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
+global:Anonymous-Users	Anonymous Users
+05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+d4b4488bd15398eda08afc6368715168f3ed67a7	openstack/panko-core
+095a414641387a72a1fa1413ad3a8c2c2afeb9d9	openstack/panko-ptl
