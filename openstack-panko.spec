@@ -15,7 +15,6 @@ Source2:        %{pypi_name}.logrotate
 BuildArch:      noarch
 
 BuildRequires:  python-setuptools
-BuildRequires:  python-sphinx
 BuildRequires:  python-pbr
 BuildRequires:  python2-devel
 BuildRequires:  openstack-macros
@@ -37,7 +36,6 @@ Requires:       python-oslo-log >= 1.14.0
 Requires:       python-oslo-middleware >= 3.10.0
 Requires:       python-oslo-policy >= 0.5.0
 Requires:       python-oslo-reports >= 0.6.0
-Requires:       python-oslo-sphinx >= 2.2.0
 Requires:       python-oslo-utils >= 3.5.0
 Requires:       python-paste-deploy
 Requires:       python-pecan >= 0.9
@@ -103,6 +101,8 @@ This package contains the Gnocchi test files.
 Summary:          Documentation for OpenStack panko
 
 Requires:         python-panko = %{version}-%{release}
+BuildRequires:    python-sphinx
+BuildRequires:    python-oslo-sphinx >= 2.2.0
 
 %description      doc
 OpenStack panko provides services to measure and
