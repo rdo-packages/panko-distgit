@@ -37,9 +37,9 @@ Requires:       python-oslo-middleware >= 3.10.0
 Requires:       python-oslo-policy >= 0.5.0
 Requires:       python-oslo-reports >= 0.6.0
 Requires:       python-oslo-utils >= 3.5.0
+Requires:       python-paste
 Requires:       python-paste-deploy
-Requires:       python-pecan >= 0.9
-Requires:       python-swiftclient >= 2.5.0
+Requires:       python-pecan >= 1.0.0
 Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-sqlalchemy-utils
@@ -48,6 +48,7 @@ Requires:       PyYAML
 Requires:       python-webob >= 1.2.3
 Requires:       python-wsme
 Requires:       python-dateutil >= 2.4.2
+Requires:       python-pbr
 
 %description -n   python-%{pypi_name}
 OpenStack panko provides API to store events from OpenStack components.
