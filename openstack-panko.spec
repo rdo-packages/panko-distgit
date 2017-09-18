@@ -104,6 +104,7 @@ Summary:          Documentation for OpenStack panko
 Requires:         python-panko = %{version}-%{release}
 BuildRequires:    python-sphinx
 BuildRequires:    python-oslo-sphinx >= 2.2.0
+BuildRequires:    openstack-macros
 
 %description      doc
 OpenStack panko provides services to measure and
@@ -122,7 +123,7 @@ find panko -name \*.py -exec sed -i '/\/usr\/bin\/env python/{d;q}' {} +
 
 sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 
-rm -rf {test-,}requirements.txt tools/{pip,test}-requires
+%py_req_cleanup
 
 
 %build
