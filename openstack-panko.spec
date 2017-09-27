@@ -91,11 +91,11 @@ OpenStack panko provides services to measure and
 collect events from OpenStack components.
 
 %package -n python-panko-tests
-Summary:        Gnocchi tests
+Summary:       Panko tests
 Requires:       python-panko = %{version}-%{release}
 
 %description -n python-%{pypi_name}-tests
-This package contains the Gnocchi test files.
+This package contains the Panko test files.
 
 %if 0%{?with_doc}
 %package doc
