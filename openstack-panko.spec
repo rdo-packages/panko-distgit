@@ -2,6 +2,13 @@
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global common_desc OpenStack Panko provides API to store events from OpenStack components.
+
+%global common_desc_doc \
+OpenStack Panko provides services to measure and \
+collect events from OpenStack components.
+
+
 Name:           openstack-panko
 Version:        XXX
 Release:        XXX
@@ -51,9 +58,9 @@ Requires:       python-dateutil >= 2.4.2
 Requires:       python-pbr
 
 %description -n   python-%{pypi_name}
-OpenStack panko provides API to store events from OpenStack components.
+%{common_desc}
 
-This package contains the panko python library.
+This package contains the Panko python library.
 
 
 %package        api
@@ -64,9 +71,9 @@ Requires:       %{name}-common = %{version}-%{release}
 
 
 %description api
-OpenStack panko provides API to store events from OpenStack components.
+%{common_desc}
 
-This package contains the panko API service.
+This package contains the Panko API service.
 
 %package        common
 Summary:        Components common to all OpenStack panko services
@@ -87,8 +94,7 @@ Requires:       openstack-ceilometer-common
 
 
 %description    common
-OpenStack panko provides services to measure and
-collect events from OpenStack components.
+%{common_desc_doc}
 
 %package -n python-panko-tests
 Summary:       Panko tests
@@ -107,10 +113,9 @@ BuildRequires:    python-oslo-sphinx >= 2.2.0
 BuildRequires:    openstack-macros
 
 %description      doc
-OpenStack panko provides services to measure and
-collect events from OpenStack components.
+%{common_desc_doc}
 
-This package contains documentation files for panko.
+This package contains documentation files for Panko.
 %endif
 
 
