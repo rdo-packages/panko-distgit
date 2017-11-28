@@ -229,3 +229,4 @@ exit 0
 - initial spec
 
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/panko/commit/?id=48b3c63cb594c3a7ecb4dea7e2a9e42fe10a9bb1
