@@ -163,9 +163,6 @@ install -p -D -m 640 etc/panko/api_paste.ini %{buildroot}%{_sysconfdir}/panko/ap
 
 #TODO(prad): build the docs at run time, once the we get rid of postgres setup dependency
 
-# Configuration
-cp -R etc/panko/policy.json %{buildroot}/%{_sysconfdir}/panko
-
 # Setup directories
 install -d -m 755 %{buildroot}%{_sharedstatedir}/panko
 install -d -m 755 %{buildroot}%{_sharedstatedir}/panko/tmp
@@ -207,7 +204,6 @@ exit 0
 %files common
 %dir %{_sysconfdir}/panko
 %attr(-, root, panko) %{_datadir}/panko/panko-dist.conf
-%config(noreplace) %attr(-, root, panko) %{_sysconfdir}/panko/policy.json
 %config(noreplace) %attr(-, root, panko) %{_sysconfdir}/panko/panko.conf
 %config(noreplace) %attr(-, root, panko) %{_sysconfdir}/panko/api_paste.ini
 %config(noreplace) %attr(-, root, panko) %{_sysconfdir}/logrotate.d/%{name}
@@ -227,5 +223,3 @@ exit 0
 %changelog
 * Fri Jul 29 2016 Pradeep Kilambi <pkilambi@redhat.com> - 1.0.0.0b1-1
 - initial spec
-
-
