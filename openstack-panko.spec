@@ -223,3 +223,4 @@ exit 0
 %changelog
 * Fri Jul 29 2016 Pradeep Kilambi <pkilambi@redhat.com> - 1.0.0.0b1-1
 - initial spec
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/panko/commit/?id=e8b1378c0f9977b95dcf5c949b06ab57204cb57b
