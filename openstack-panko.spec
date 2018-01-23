@@ -3,7 +3,7 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           openstack-panko
-Version:        3.0.0
+Version:        3.1.0
 Release:        1%{?dist}
 Summary:        Panko provides Event storage and REST API
 
@@ -223,6 +223,9 @@ exit 0
 
 
 %changelog
+* Tue Jan 23 2018 RDO <dev@lists.rdoproject.org> 3.1.0-1
+- Update to 3.1.0
+
 * Thu Aug 24 2017 Alfredo Moralejo <amoralej@redhat.com> 3.0.0-1
 - Update to 3.0.0
 
