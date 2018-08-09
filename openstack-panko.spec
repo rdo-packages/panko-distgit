@@ -45,6 +45,7 @@ Requires:       python-paste-deploy
 Requires:       python-pecan >= 1.0.0
 Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 1.0.10
+Requires:       python-alembic >= 0.7.6
 Requires:       python-sqlalchemy-utils
 Requires:       python-stevedore >= 1.9.0
 Requires:       PyYAML
