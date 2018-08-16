@@ -6,8 +6,8 @@
 
 
 Name:           openstack-panko
-Version:        XXX
-Release:        XXX
+Version:        5.0.0
+Release:        1%{?dist}
 Summary:        Panko provides Event storage and REST API
 
 License:        ASL 2.0
@@ -217,5 +217,8 @@ exit 0
 
 
 %changelog
+* Thu Aug 16 2018 RDO <dev@lists.rdoproject.org> 5.0.0-1
+- Update to 5.0.0
+
 * Fri Jul 29 2016 Pradeep Kilambi <pkilambi@redhat.com> - 1.0.0.0b1-1
 - initial spec
