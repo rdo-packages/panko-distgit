@@ -107,6 +107,7 @@ BuildRequires:    python%{pyver}-oslo-messaging
 BuildRequires:    python%{pyver}-oslo-policy
 BuildRequires:    python%{pyver}-oslo-reports
 BuildRequires:    python%{pyver}-oslo-service
+BuildRequires:    python%{pyver}-tenacity
 BuildRequires:    python%{pyver}-werkzeug
 
 Requires:       python%{pyver}-panko = %{version}-%{release}
