@@ -241,3 +241,4 @@ exit 0
 
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/panko/commit/?id=91f809625560d770f39299f782eff2b56ec84874
