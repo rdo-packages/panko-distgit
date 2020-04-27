@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver %{python3_pkgversion}
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %python%{pyver}_sitelib
-%global pyver_install %py%{pyver}_install
-%global pyver_build %py%{pyver}_build
-# End of macros for py2/py3 compatibility
 %global pypi_name panko
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
@@ -29,56 +17,47 @@ Source1:        %{pypi_name}-dist.conf
 Source2:        %{pypi_name}.logrotate
 BuildArch:      noarch
 
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-pbr
-BuildRequires:  python%{pyver}-devel
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-pbr
+BuildRequires:  python3-devel
 BuildRequires:  openstack-macros
 
 %description
 HTTP API to store events.
 
-%package -n     python%{pyver}-%{pypi_name}
+%package -n     python3-%{pypi_name}
 Summary:        OpenStack panko python libraries
-%{?python_provide:%python_provide python%{pyver}-%{pypi_name}}
+%{?python_provide:%python_provide python3-%{pypi_name}}
 
-Requires:       python%{pyver}-debtcollector >= 1.2.0
-Requires:       python%{pyver}-tenacity >= 3.1.0
-Requires:       python%{pyver}-keystonemiddleware >= 4.0.0
-Requires:       python%{pyver}-oslo-config >= 2:3.9.0
-Requires:       python%{pyver}-oslo-db >= 4.1.0
-Requires:       python%{pyver}-oslo-i18n >= 2.1.0
-Requires:       python%{pyver}-oslo-log >= 1.14.0
-Requires:       python%{pyver}-oslo-middleware >= 3.10.0
-Requires:       python%{pyver}-oslo-policy >= 0.5.0
-Requires:       python%{pyver}-oslo-reports >= 0.6.0
-Requires:       python%{pyver}-oslo-utils >= 3.5.0
-Requires:       python%{pyver}-oslo-serialization >= 2.25.0
-Requires:       python%{pyver}-pecan >= 1.0.0
-Requires:       python%{pyver}-six >= 1.9.0
-Requires:       python%{pyver}-sqlalchemy >= 1.0.10
-Requires:       python%{pyver}-alembic >= 0.7.6
-Requires:       python%{pyver}-stevedore >= 1.9.0
-Requires:       python%{pyver}-webob >= 1.2.3
-Requires:       python%{pyver}-wsme
-Requires:       python%{pyver}-dateutil >= 2.4.2
-Requires:       python%{pyver}-pbr
+Requires:       python3-debtcollector >= 1.2.0
+Requires:       python3-tenacity >= 3.1.0
+Requires:       python3-keystonemiddleware >= 4.0.0
+Requires:       python3-oslo-config >= 2:3.9.0
+Requires:       python3-oslo-db >= 4.1.0
+Requires:       python3-oslo-i18n >= 2.1.0
+Requires:       python3-oslo-log >= 1.14.0
+Requires:       python3-oslo-middleware >= 3.10.0
+Requires:       python3-oslo-policy >= 0.5.0
+Requires:       python3-oslo-reports >= 0.6.0
+Requires:       python3-oslo-utils >= 3.5.0
+Requires:       python3-oslo-serialization >= 2.25.0
+Requires:       python3-pecan >= 1.0.0
+Requires:       python3-six >= 1.9.0
+Requires:       python3-sqlalchemy >= 1.0.10
+Requires:       python3-alembic >= 0.7.6
+Requires:       python3-stevedore >= 1.9.0
+Requires:       python3-webob >= 1.2.3
+Requires:       python3-wsme
+Requires:       python3-dateutil >= 2.4.2
+Requires:       python3-pbr
 
-# Handle python2 exception
-%if %{pyver} == 2
-Requires:       python-lxml
-Requires:       python-paste
-Requires:       python-paste-deploy
-Requires:       python-sqlalchemy-utils
-Requires:       PyYAML
-%else
-Requires:       python%{pyver}-lxml
-Requires:       python%{pyver}-paste
-Requires:       python%{pyver}-paste-deploy
-Requires:       python%{pyver}-sqlalchemy-utils
-Requires:       python%{pyver}-PyYAML
-%endif
+Requires:       python3-lxml
+Requires:       python3-paste
+Requires:       python3-paste-deploy
+Requires:       python3-sqlalchemy-utils
+Requires:       python3-PyYAML
 
-%description -n   python%{pyver}-%{pypi_name}
+%description -n   python3-%{pypi_name}
 %{common_desc}
 
 This package contains the Panko python library.
@@ -100,39 +79,39 @@ This package contains the Panko API service.
 Summary:        Components common to all OpenStack panko services
 
 # Config file generation
-BuildRequires:    python%{pyver}-oslo-config >= 2:2.6.0
-BuildRequires:    python%{pyver}-oslo-concurrency
-BuildRequires:    python%{pyver}-oslo-db
-BuildRequires:    python%{pyver}-oslo-log
-BuildRequires:    python%{pyver}-oslo-messaging
-BuildRequires:    python%{pyver}-oslo-policy
-BuildRequires:    python%{pyver}-oslo-reports
-BuildRequires:    python%{pyver}-oslo-service
-BuildRequires:    python%{pyver}-tenacity
-BuildRequires:    python%{pyver}-werkzeug
+BuildRequires:    python3-oslo-config >= 2:2.6.0
+BuildRequires:    python3-oslo-concurrency
+BuildRequires:    python3-oslo-db
+BuildRequires:    python3-oslo-log
+BuildRequires:    python3-oslo-messaging
+BuildRequires:    python3-oslo-policy
+BuildRequires:    python3-oslo-reports
+BuildRequires:    python3-oslo-service
+BuildRequires:    python3-tenacity
+BuildRequires:    python3-werkzeug
 
-Requires:       python%{pyver}-panko = %{version}-%{release}
+Requires:       python3-panko = %{version}-%{release}
 Requires:       openstack-ceilometer-common
 
 
 %description    common
 %{common_desc}
 
-%package -n python%{pyver}-panko-tests
+%package -n python3-panko-tests
 Summary:       Panko tests
-%{?python_provide:%python_provide python%{pyver}-panko-tests}
-Requires:       python%{pyver}-panko = %{version}-%{release}
+%{?python_provide:%python_provide python3-panko-tests}
+Requires:       python3-panko = %{version}-%{release}
 
-%description -n python%{pyver}-%{pypi_name}-tests
+%description -n python3-%{pypi_name}-tests
 This package contains the Panko test files.
 
 %if 0%{?with_doc}
 %package doc
 Summary:          Documentation for OpenStack panko
 
-Requires:         python%{pyver}-panko = %{version}-%{release}
-BuildRequires:    python%{pyver}-sphinx
-BuildRequires:    python%{pyver}-oslo-sphinx >= 2.2.0
+Requires:         python3-panko = %{version}-%{release}
+BuildRequires:    python3-sphinx
+BuildRequires:    python3-oslo-sphinx >= 2.2.0
 BuildRequires:    openstack-macros
 
 %description      doc
@@ -157,9 +136,9 @@ sed -i '/setup_requires/d; /install_requires/d; /dependency_links/d' setup.py
 %build
 
 # Generate config file
-PYTHONPATH=. oslo-config-generator-%{pyver} --config-file=etc/panko/panko-config-generator.conf
+PYTHONPATH=. oslo-config-generator --config-file=etc/panko/panko-config-generator.conf
 
-%{pyver_build}
+%{py3_build}
 
 # Programmatically update defaults in sample config
 # which is installed at /etc/panko/panko.conf
@@ -174,7 +153,7 @@ done < %{SOURCE1}
 
 %install
 
-%{pyver_install}
+%{py3_install}
 
 mkdir -p %{buildroot}/%{_sysconfdir}/sysconfig/
 mkdir -p %{buildroot}/%{_sysconfdir}/panko/
@@ -207,15 +186,15 @@ usermod -a -G panko ceilometer
 exit 0
 
 
-%files -n python%{pyver}-panko
-%{pyver_sitelib}/panko
-%{pyver_sitelib}/panko-*.egg-info
+%files -n python3-panko
+%{python3_sitelib}/panko
+%{python3_sitelib}/panko-*.egg-info
 
-%exclude %{pyver_sitelib}/panko/tests
+%exclude %{python3_sitelib}/panko/tests
 
-%files -n python%{pyver}-panko-tests
+%files -n python3-panko-tests
 %license LICENSE
-%{pyver_sitelib}/panko/tests
+%{python3_sitelib}/panko/tests
 
 %files api
 %defattr(-,root,root,-)
