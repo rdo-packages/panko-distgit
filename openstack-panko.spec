@@ -56,6 +56,7 @@ Requires:       python3-paste
 Requires:       python3-paste-deploy
 Requires:       python3-sqlalchemy-utils
 Requires:       python3-PyYAML
+Requires:       python3-pymongo > 3.1
 
 %description -n   python3-%{pypi_name}
 %{common_desc}
