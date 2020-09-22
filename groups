@@ -1,9 +1,9 @@
 # UUID Group Name
 global:Registered-Users	Registered Users
-6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
-401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
 global:Anonymous-Users	Anonymous Users
 d4b4488bd15398eda08afc6368715168f3ed67a7	openstack/panko-core
-4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
 05a678d3d4a168e149d5e8a0063bbd1b1c5526da	Administrators
 095a414641387a72a1fa1413ad3a8c2c2afeb9d9	openstack/panko-ptl
+401cf37bee35d1c809d4d957e55f2a304f8eed69	rdo-provenpackagers
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73	Non-Interactive Users
+4572c517702492251ad622a289176552a8acbbb2	rdo-superusers
