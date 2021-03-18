@@ -43,31 +43,32 @@ Summary:        OpenStack panko python libraries
 
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python3-tenacity >= 3.1.0
-Requires:       python3-keystonemiddleware >= 4.0.0
+Requires:       python3-keystonemiddleware >= 5.1.0
 Requires:       python3-oslo-config >= 2:3.9.0
 Requires:       python3-oslo-db >= 4.1.0
 Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-log >= 1.14.0
+Requires:       python3-oslo-log >= 4.3.0
 Requires:       python3-oslo-middleware >= 3.10.0
-Requires:       python3-oslo-policy >= 0.5.0
+Requires:       python3-oslo-policy >= 3.6.0
 Requires:       python3-oslo-reports >= 0.6.0
 Requires:       python3-oslo-utils >= 3.5.0
 Requires:       python3-oslo-serialization >= 2.25.0
 Requires:       python3-pecan >= 1.0.0
-Requires:       python3-six >= 1.9.0
 Requires:       python3-sqlalchemy >= 1.0.10
 Requires:       python3-alembic >= 0.7.6
 Requires:       python3-stevedore >= 1.9.0
 Requires:       python3-webob >= 1.2.3
-Requires:       python3-wsme
+Requires:       python3-wsme >= 0.8
 Requires:       python3-dateutil >= 2.4.2
-Requires:       python3-pbr
+Requires:       python3-pbr >= 2.0.0
 
-Requires:       python3-lxml
+Requires:       python3-lxml >= 2.3
 Requires:       python3-paste
-Requires:       python3-paste-deploy
+Requires:       python3-paste-deploy >= 1.5.0
 Requires:       python3-sqlalchemy-utils
-Requires:       python3-PyYAML
+Requires:       python3-yaml >= 3.1.0
+Requires:       python3-oslo-context >= 2.22.0
+Requires:       python3-pymongo
 
 %description -n   python3-%{pypi_name}
 %{common_desc}
