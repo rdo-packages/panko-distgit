@@ -68,7 +68,6 @@ Requires:       python3-paste-deploy >= 1.5.0
 Requires:       python3-sqlalchemy-utils
 Requires:       python3-yaml >= 3.1.0
 Requires:       python3-oslo-context >= 2.22.0
-Requires:       python3-pymongo
 
 %description -n   python3-%{pypi_name}
 %{common_desc}
