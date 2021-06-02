@@ -238,3 +238,4 @@ exit 0
 
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/panko/commit/ca45bbdca049c6544cd9ece0d564ae7f20a1cd78
