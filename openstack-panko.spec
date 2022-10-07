@@ -57,6 +57,7 @@ Requires:       python3-oslo-utils >= 3.5.0
 Requires:       python3-oslo-serialization >= 2.25.0
 Requires:       python3-pecan >= 1.0.0
 Requires:       python3-sqlalchemy >= 1.0.10
+Requires:       python3-sqlalchemy < 1.4.0
 Requires:       python3-alembic >= 0.7.6
 Requires:       python3-stevedore >= 1.9.0
 Requires:       python3-webob >= 1.2.3
